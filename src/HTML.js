@@ -494,7 +494,9 @@ export default class HTML extends PureComponent {
             .filter((s) => s !== undefined);
 
             return (
-                <Wrapper key={key} style={style} {...renderersProps}>
+                <Wrapper key={key} style={[style,{flexDirection: 'row',
+                alignItems: 'center',
+                flexWrap: 'wrap'}]} {...renderersProps}>
                     { textElement }
                     { childElements }
                 </Wrapper>
